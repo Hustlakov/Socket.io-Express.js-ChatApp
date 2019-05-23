@@ -22,8 +22,13 @@ io.on("connection", socket => {
     console.log(data);
   });
   socket.on("questionToServer", data => {
+    //Send to everyone except self
     socket.broadcast.emit("answerToClient", {
       chat: "Hey client, I am server and I can see you"
+    });
+    //Send to everyone including self
+    io.emit("answerToEveryone", {
+      chat2: "This Message is for everyone including myself"
     });
   });
 });

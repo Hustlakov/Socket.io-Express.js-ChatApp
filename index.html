@@ -14,29 +14,42 @@
     <title>Socket.io</title>
   </head>
   <body>
-    <div class="container">
+    <div class="main-container container-fluid">
       <div class="row">
-        <div class="col">
-          <h1>Playing with WebSockets in SocketIo</h1>
-          <div class="col-6 myOutput" id="myOutput"></div>
-          <div class="col-6 input-group mb-3">
-            <textarea
-              id="myInput"
-              class="form-control myInput"
-              placeholder="Type..."
-            ></textarea>
-            <div class="input-group-append">
-              <button
-                onClick="inputMsg()"
-                class="btn btn-outline-secondary"
-                type="button"
-                id="button-addon2"
-              >
-                Button
-              </button>
+        <div class="col-12">
+          <h1 class="text-center">Playing with WebSockets in SocketIo</h1>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-8">
+          <div class="myOutput justify-content-center row" id="myOutput">
+            <div class="col-8">
+              <ul class="list-group" id="myUl">
+                <li class="list-group-item">Cras justo odio</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row justify-content-center input-group mb-3">
+            <div class="col-6">
+              <textarea
+                onKeyUp="inputMsg(event)"
+                id="myInput"
+                class="form-control myInput"
+                placeholder="Type..."
+              ></textarea>
+
+              <div class=" float-right input-group-append">
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  id="button-addon2"
+                >
+                  Click or press Enter to send
+                </button>
+              </div>
             </div>
           </div>
         </div>
+        <div class="col-2"></div>
       </div>
     </div>
     <!-- Optional Javascript -->
