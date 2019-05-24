@@ -8,7 +8,7 @@ let inputMsg = event => {
   }
 };
 
-socket.on("SendGlobalMessage", data => {
+socket.on("sendGlobalMessage", data => {
   let li = document.createElement("li");
   let ul = document.querySelector("#myUl");
   let countLiInUl = ul.childElementCount;
